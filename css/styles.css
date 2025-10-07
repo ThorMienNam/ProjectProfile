@@ -35,7 +35,7 @@ html, body {
   width: var(--container);
   max-width: 90vw;
   padding: 40px 60px;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 40px;
   transition: all 0.4s ease;
 }
@@ -53,17 +53,22 @@ html, body {
 
 /* HEADER */
 .site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 28px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  animation: fadeDown 1s ease;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 25px rgba(0, 50, 150, 0.08);
+  padding: 16px 60px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  animation: fadeDown 0.8s ease;
 }
 
 .logo {
