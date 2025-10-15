@@ -1,10 +1,10 @@
-// Toggle mobile menu
+// toggle mobile menu
 document.addEventListener('DOMContentLoaded', function(){
   const hamb = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   hamb && hamb.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-  // Smooth scroll for anchor links
+  // smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e){
       const href = this.getAttribute('href');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // Simple contact form -> open mail client with mailto
+  // simple contact form -> open mail client with mailto
   const form = document.getElementById('contact-form');
   if(form){
     form.addEventListener('submit', function(e){
