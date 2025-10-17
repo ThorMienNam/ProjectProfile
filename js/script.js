@@ -35,4 +35,25 @@ document.addEventListener('DOMContentLoaded', function(){
   // set year in footer
   const yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const avatars = document.querySelectorAll('.hero-image .avatar');
+  const nextBtn = document.querySelector('.hero-image .avatar-btn.next');
+  const prevBtn = document.querySelector('.hero-image .avatar-btn.prev');
+  let currentAvatar = 0;
+
+  function showAvatar(index) {
+    avatars.forEach((img, i) => img.classList.toggle('active', i === index));
+  }
+
+  if(nextBtn && prevBtn && avatars.length > 0){
+    nextBtn.addEventListener('click', () => {
+      currentAvatar = (currentAvatar + 1) % avatars.length;
+      showAvatar(currentAvatar);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentAvatar = (currentAvatar - 1 + avatars.length) % avatars.length;
+      showAvatar(currentAvatar);
+    });
+  }
 });

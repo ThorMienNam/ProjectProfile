@@ -19,6 +19,7 @@
         <li><a href="#skills">Kỹ năng</a></li>
         <li><a href="#projects">Dự án</a></li>
         <li><a href="#contact">Liên hệ</a></li>
+        <li><a href="#certificates">Chứng chỉ</a></li>
       </ul>
       <button class="hamburger" aria-label="Mở menu">☰</button>
     </nav>
@@ -29,7 +30,7 @@
     <section id="hero" class="hero container">
       <div class="hero-content">
         <h1>Xin chào, tôi là <span class="accent">Phạm Hải Anh</span></h1>
-        <p class="lead">Chuyên viên phát triển web, lập trình viên C++.</p>
+        <p class="lead">Chuyên viên phát triển web, lập trình viên C/C++.</p>
         <p class="cta-row">
           <a href="#contact" class="btn btn-primary">Liên hệ ngay</a>
           <a href="files/CV_HaiAnh.pdf" class="btn">Tải CV</a>
@@ -51,7 +52,13 @@
       </div>
 
       <div class="hero-image">
-        <img src="images/avatar.jpg" alt="Ảnh đại diện Phạm Hải Anh">
+          <button class="avatar-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="avatar-frame">
+            <img src="images/avatar1.jpg" class="avatar active" alt="Ảnh đại diện 1">
+            <img src="images/avatar2.jpg" class="avatar" alt="Ảnh đại diện 2">
+            <img src="images/avatar3.jpg" class="avatar" alt="Ảnh đại diện 3">
+          </div>
+          <button class="avatar-btn next"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
 
@@ -60,7 +67,9 @@
       <h2>Giới thiệu</h2>
       <div class="about-grid">
         <div>
-          <p>Mình là lập trình viên , tập trung vào lập trình game và lập trình web. Mình thích tối ưu, viết code sạch và deploy nhanh lên GitHub Pages.</p>
+          <p>Mình là lập trình viên , tập trung vào lập trình game và lập trình web. Mình tối ưu, viết code sạch và deploy nhanh lên GitHub Pages.</p>
+          <p>Sở thích làm game, lập trình web và chơi bóng đá.</p>
+
         </div>
         <ul>
           <li><strong>Học vấn:</strong>Chuyên ngành Công nghệ thông tin Đại Học Giao Thông Vận Tải</li>
@@ -73,7 +82,7 @@
     <!-- SKILLS -->
     <section id="skills" class="container section">
       <h2>Kỹ năng</h2>
-      < class="skills-grid">
+      <div class="skills-grid">
         <div class="skill">
           <div class="skill-name">HTML &amp; CSS</div>
           <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
@@ -93,10 +102,35 @@
       </div>
     </section>
 
+    <!-- CERTIFICATES & AWARDS -->
+    <section id="certificates" class="container section">
+      <h2>Chứng chỉ &amp; Giải thưởng</h2>
+
+      <div class="cert-grid">
+        <div class="cert-card" data-aos="fade-up">
+          <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="cert-info">
+            <h3>Không Có</h3>  
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects" class="container section">
       <h2>Dự án tiêu biểu</h2>
-      <div class="projects-grid">
+
+      <div class="project-grid">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <div class="project-info">
+            <h3>Game Caro Tích Hợp AI</h3>
+            <p>Phát triển trò chơi Caro tích hợp trí tuệ nhân tạo (AI) giúp người chơi thi đấu với máy.</p>
+            <p><strong>Công nghệ:</strong> C#, API, Socket</p>
+            <p><strong>Năm:</strong> 2025</p>
+            <a href="https://github.com/ThorMienNam/CaroGameWDF/tree/master" target="_blank" class="btn btn-primary">Xem GitHub</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -127,10 +161,11 @@
         </div>
       </div>
     </section>
+
   </div>
 
   <footer class="site-footer container">
-    <p>© <span id="year"></span> Phạm Hải Anh. Thiết kế &amp; code bằng ❤️</p>
+    <p>© <span id="year"></span> Phạm Hải Anh. Thiết kế &amp; code bằng cả ❤️</p>
   </footer>
 
   <script src="js/script.js" defer></script>
