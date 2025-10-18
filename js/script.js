@@ -57,3 +57,24 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 });
+  // image viewer modal
+  const imageModal = document.createElement('div');
+  imageModal.id = 'imageModal';
+  imageModal.className = 'modal';
+  imageModal.innerHTML = `
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  `;
+  document.body.appendChild(imageModal);
+
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = imageModal.querySelector('.close');
+
+  document.addEventListener('click', e => {
+    if (e.target.matches('.project-image img')) {
+      modalImg.src = e.target.src;
+      imageModal.style.display = 'block';
+    } else if (e.target === imageModal || e.target === closeBtn) {
+      imageModal.style.display = 'none';
+    }
+});
